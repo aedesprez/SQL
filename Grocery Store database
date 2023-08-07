@@ -1,0 +1,28 @@
+Create a grocery store database 
+
+CREATE TABLE SVM (sku INTEGER primary key, brand TEXT, name TEXT, quantity INTEGER, price INTEGER); 
+
+INSERT INTO SVM VALUES (1, "Lays", "BBQ", 5, 4.99); 
+INSERT INTO SVM VALUES (2, "King Arthur", "flour", 10, 5.99); 
+INSERT INTO SVM VALUES (3, "Dunkin", "coffee", 1, 2.99);
+INSERT INTO SVM VALUES (4, "Simple Mills", "crackers", 10, 3.99);
+INSERT INTO SVM VALUES (5, "Meyers", "hand soap", 7, 3.99);
+INSERT INTO SVM VALUES (6, "General Mills", "cereal", 15, 1.99);
+INSERT INTO SVM VALUES (7, "Lays", "salt vinegar", 3, 2.99);
+INSERT INTO SVM VALUES (8, "AMC", "popcorn", 4, 2.99);
+INSERT INTO SVM VALUES (9, "Dove", "deodorant", 8, 3.99);
+INSERT INTO SVM VALUES (10, "Scott", "toilet paper", 20, 4.50);
+INSERT INTO SVM VALUES (11, "Bounty", "paper towels", 7, 6.50);
+INSERT INTO SVM VALUES (12, "Bounty", "napkins", 15, 4.50); 
+INSERT INTO SVM VALUES (13, "Dasani", "water", 13, 5.50); 
+INSERT INTO SVM VALUES (14, "Natures Own", "bread", 10, 4.00); 
+INSERT INTO SVM VALUES (15, "Chiquita", "bananas", 100, 0.35); 
+
+--display with database by price
+SELECT * FROM SVM ORDER BY price desc; 
+
+--show the items with quantity less than 5
+SELECT * FROM SVM WHERE quantity<5; 
+
+--show the items where the quantity is less than 5 and price is below 5.00
+SELECT * FROM SVM WHERE quantity<5 AND price <5.00;
